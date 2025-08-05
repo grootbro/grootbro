@@ -12,7 +12,7 @@
 
 ## 🚀 About Me
 
-🔍 **QA Lead** with 6+ years of experience in quality assurance and test automation  
+🔍 **QA Lead** with 12+ years of experience in quality assurance and test automation  
 🏗️ Currently leading QA at **Mindforest** and working on **ToON** blockchain project  
 🌱 Specialized in full-cycle testing, automation frameworks, and QA team management  
 🎯 Expert in Telegram Mini Apps, blockchain integration, and microservices testing  
