@@ -1,4 +1,4 @@
-# Hi there! 👋 I'm Vadim Vasishev
+# Hi there! 👋 I'm Groot bro
 
 > **QA Fullstack Engineer** with DevOps skills, passionate about quality assurance and test automation
 
