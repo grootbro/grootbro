@@ -82,9 +82,13 @@
 ## 🏢 Current Role
 
 **QA Fullstack** at **OneTwoTrip!** (May 2023 – Present)
+
 ✦ Performing full-stack QA across web applications, mobile apps, and API layers
+
 ✦ Designing and executing acceptance test scenarios based on requirements and user stories
+
 ✦ Building and maintaining regression test suites for continuous quality assurance
+
 ✦ Testing mobile app releases for iOS and Android platforms before production deployment
 
 ---
