@@ -81,7 +81,7 @@
 
 ## 🏢 Current Role
 
-**QA Lead** at **Mindforest** (May 2023 – Present)
+**QA Fullstack** at **OneTwoTrip!** (May 2023 – Present)
 - Leading QA department and establishing effective testing processes
 - Implementing automated testing solutions and managing release cycles
 - Currently working on **ToON** - multi-platform blockchain application
