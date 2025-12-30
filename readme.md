@@ -12,10 +12,10 @@
 
 ## 🚀 About Me
 
-🔍 **QA Lead** with 12+ years of experience in quality assurance and test automation  
-🏗️ Currently leading QA at **Mindforest** and working on **ToON** blockchain project  
+🔍 **QA Lead** with 15+ years of experience in quality assurance and test automation  
+🏗️ Currently Fullstack QA at **OneTwoTrip!** and working on **ToON** blockchain project  
 🌱 Specialized in full-cycle testing, automation frameworks, and QA team management  
-🎯 Expert in Telegram Mini Apps, blockchain integration, and microservices testing  
+🎯 Expert in Telegram Mini Apps, blockchain & crypto integration, fintech and microservices testing  
 📍 Based in **Thailand**
 
 ## 🛠️ Tech Stack
