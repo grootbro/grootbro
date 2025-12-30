@@ -13,7 +13,7 @@
 ## 🚀 About Me
 
 🔍 **QA Lead** with 15+ years of experience in quality assurance and test automation  
-🏗️ Currently Fullstack QA at **OneTwoTrip!** and working on **ToON** blockchain project  
+🏗️ Currently Fullstack QA at **OneTwoTrip!** and working on **TON Pure** blockchain project  
 🌱 Specialized in full-cycle testing, automation frameworks, and QA team management  
 🎯 Expert in Telegram Mini Apps, blockchain & crypto integration, fintech and microservices testing  
 📍 Based in **Thailand**
