@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Portfolio](assets/portfolio-lion.svg)](https://ravefox.dev/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=portfolio)
+[![Portfolio](assets/portfolio-ufo.svg)](https://ravefox.dev/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=portfolio)
 [![AppNative](assets/appnative-badge.svg)](https://appnative.pro/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=header)  
 [![Email](https://img.shields.io/badge/%F0%9F%93%A7_Email-vadim%40ravefox.dev-red?style=for-the-badge)](mailto:vadim@ravefox.dev)
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ravefox)
