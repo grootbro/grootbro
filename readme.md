@@ -143,9 +143,13 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 
 [Explore my merged pull requests →](https://github.com/search?q=author%3Agrootbro+is%3Apr+is%3Amerged+is%3Apublic+-user%3Agrootbro&type=pullrequests)
 
-## 🌌 GitHub Activity
+## 🐍 GitHub Activity
 
-![A year of GitHub contributions in a night skyline](https://raw.githubusercontent.com/grootbro/grootbro/main/assets/github-activity-night.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/github-snake.svg">
+  <img alt="Snake animation of my GitHub contributions" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/github-snake.svg" width="840">
+</picture>
 
 
 ---
