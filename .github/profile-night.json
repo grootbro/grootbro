@@ -1,0 +1,16 @@
+{
+  "type": "normal",
+  "backgroundColor": "#0d1117",
+  "foregroundColor": "#e6edf3",
+  "strongColor": "#facc15",
+  "weakColor": "#8b949e",
+  "radarColor": "#facc15",
+  "contribColors": [
+    "rgb(25,60,130)",
+    "rgb(25,90,210)",
+    "rgb(25,120,220)",
+    "rgb(25,150,230)",
+    "rgb(25,165,240)"
+  ],
+  "fileName": "assets/github-activity-night.svg"
+}
