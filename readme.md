@@ -77,7 +77,7 @@
 <details open>
 <summary><b>🧪 Testing & Quality</b></summary>
 
-![Cypress](https://img.shields.io/badge/Cypress-17202C?style=flat&logo=cypress&logoColor=white)
+![Cypress](https://img.shields.io/badge/Cypress-17202C?style=flat&logo=cypress&logoColor=69D3A7)
 ![🎭 Playwright](https://img.shields.io/badge/%F0%9F%8E%AD%20Playwright-2EAD33?style=flat)
 [![Midscene](https://img.shields.io/badge/Midscene-6366F1?style=flat)](https://www.midscenejs.com/midscene-test/overview)
 ![Vitest](https://img.shields.io/badge/Vitest-729B1B?style=flat&logo=vitest&logoColor=white)
@@ -155,7 +155,7 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 
 <p align="center">
   <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31fmwyreaibf5fldxoqnwlcn5tyq&amp;redirect=true">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31fmwyreaibf5fldxoqnwlcn5tyq&amp;cover_image=true&amp;theme=spotify-embed&amp;show_offline=true&amp;mode=dark" alt="My music on Spotify" width="460">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31fmwyreaibf5fldxoqnwlcn5tyq&amp;cover_image=true&amp;theme=spotify-embed&amp;show_offline=false&amp;mode=dark" alt="My music on Spotify" width="460">
   </a>
 </p>
 
