@@ -45,11 +45,9 @@ for item in items:
     groups[repo].append(item)
 for prs in groups.values():
     prs.sort(key=lambda pr: pr["pull_request"]["merged_at"], reverse=True)
-featured = sorted(
-    groups.items(),
-    key=lambda pair: pair[1][0]["pull_request"]["merged_at"],
-    reverse=True,
-)[:4]
+# Highlight upstream projects; personal/team repositories are not featured.
+preferred = ("croffasia/itsaplan", "vercel/chat", "saltmd/salt.md", "twentyhq/twenty")
+featured = [(repo, groups[repo]) for repo in preferred if groups.get(repo)]
 if not featured:
     raise RuntimeError("No merged public contributions returned; keep the last good card.")
 
@@ -69,7 +67,7 @@ for theme, colors in {
     "light": ("#ffffff", "#d0d7de", "#1f2328", "#59636e", "#0969da", "#8250df", "#f6f8fa"),
 }.items():
     bg, border, fg, muted, blue, purple, pill = colors
-    summary = f"{total} merged pull requests in public projects"
+    summary = f"{sum(len(prs) for _, prs in featured)} merged pull requests across these {len(featured)} projects"
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="840" height="{height}" viewBox="0 0 840 {height}" role="img" aria-labelledby="title desc">',
         '<title id="title">Open-source contributions by ' + escape(owner) + '</title>',
