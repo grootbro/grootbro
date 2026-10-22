@@ -137,6 +137,4 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 
 **Have something worth building? [Let's talk.](https://t.me/ravefox)** 🌱
 
-![Profile views](https://komarev.com/ghpvc/?username=grootbro&label=Profile+views&color=007EC6&style=flat)
-
 </div>
