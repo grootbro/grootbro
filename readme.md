@@ -151,6 +151,13 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
   <img alt="Snake animation of my GitHub contributions" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/github-snake.svg" width="840">
 </picture>
 
+## 🎧 On Spotify
+
+<p align="center">
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31fmwyreaibf5fldxoqnwlcn5tyq&amp;redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31fmwyreaibf5fldxoqnwlcn5tyq&amp;cover_image=true&amp;theme=spotify-embed&amp;show_offline=true&amp;mode=dark" alt="My music on Spotify" width="460">
+  </a>
+</p>
 
 ---
 
