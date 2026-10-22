@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="460" viewBox="0 0 840 460" role="img" aria-labelledby="title desc">
+<title id="title">Open-source contributions by grootbro</title>
+<desc id="desc">Accepted pull requests in public projects. Latest merged contribution and total merged pull requests for each featured project.</desc>
+<rect x=".5" y=".5" width="839" height="459" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="#1f2328">
+<text x="26" y="39" font-size="21" font-weight="600">Contributing upstream</text>
+<text x="26" y="66" font-size="14" fill="#59636e">37 merged pull requests in public projects</text>
+<g transform="translate(28 96)" fill="none" stroke="#8250df" stroke-width="2">
+<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
+<text x="60" y="110" font-size="16" font-weight="600" fill="#0969da">croffasia/itsaplan</text>
+<rect x="716" y="92" width="98" height="24" rx="12" fill="#f6f8fa"/>
+<text x="765" y="108" text-anchor="middle" font-size="12" fill="#59636e">28 merged</text>
+<text x="60" y="134" font-size="14">fix(web): recover passkey registration from stale sessions</text>
+<text x="60" y="155" font-size="12" fill="#59636e">#663 · merged 22 Oct 2026</text>
+<path d="M26 167H814" stroke="#d0d7de"/>
+<g transform="translate(28 178)" fill="none" stroke="#8250df" stroke-width="2">
+<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
+<text x="60" y="192" font-size="16" font-weight="600" fill="#0969da">saltmd/salt.md</text>
+<rect x="716" y="174" width="98" height="24" rx="12" fill="#f6f8fa"/>
+<text x="765" y="190" text-anchor="middle" font-size="12" fill="#59636e">1 merged</text>
+<text x="60" y="216" font-size="14">Allow URL properties to be edited, cleared and opened separately</text>
+<text x="60" y="237" font-size="12" fill="#59636e">#39 · merged 12 Oct 2026</text>
+<path d="M26 249H814" stroke="#d0d7de"/>
+<g transform="translate(28 260)" fill="none" stroke="#8250df" stroke-width="2">
+<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
+<text x="60" y="274" font-size="16" font-weight="600" fill="#0969da">twentyhq/twenty</text>
+<rect x="716" y="256" width="98" height="24" rx="12" fill="#f6f8fa"/>
+<text x="765" y="272" text-anchor="middle" font-size="12" fill="#59636e">1 merged</text>
+<text x="60" y="298" font-size="14">fix(front): accept null Actor context.provider (#25532)</text>
+<text x="60" y="319" font-size="12" fill="#59636e">#25537 · merged 08 Sep 2026</text>
+<path d="M26 331H814" stroke="#d0d7de"/>
+<g transform="translate(28 342)" fill="none" stroke="#8250df" stroke-width="2">
+<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
+<text x="60" y="356" font-size="16" font-weight="600" fill="#0969da">OLYMARKES/sekta-smm-content-room</text>
+<rect x="716" y="338" width="98" height="24" rx="12" fill="#f6f8fa"/>
+<text x="765" y="354" text-anchor="middle" font-size="12" fill="#59636e">2 merged</text>
+<text x="60" y="380" font-size="14">Content Room: защита данных, резервная копия и версия v2026.09.04.1</text>
+<text x="60" y="401" font-size="12" fill="#59636e">#2 · merged 04 Sep 2026</text>
+<text x="26" y="439" font-size="12" fill="#59636e">Public merged PRs · refreshed 23 Oct 2026</text>
+</g></svg>
