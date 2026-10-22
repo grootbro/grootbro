@@ -42,10 +42,12 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=flat&logo=vuedotjs&logoColor=4FC08D)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-DEA584?style=flat&logo=rust&logoColor=black)
+![Vue](https://img.shields.io/badge/Vue-35495E?style=flat&logo=vuedotjs&logoColor=4FC08D)
+![Next](https://img.shields.io/badge/Next-000000?style=flat&logo=nextdotjs&logoColor=white)
 ![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)
+![Tailwind](https://img.shields.io/badge/Tailwind-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)
 
 </details>
 
