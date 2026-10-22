@@ -4,11 +4,11 @@
 
 <div align="center">
 
-[![Portfolio](assets/portfolio-ufo.svg)](https://ravefox.dev/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=portfolio)
-[![AppNative](assets/appnative-badge.svg)](https://appnative.pro/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=header)  
-[![Email](https://img.shields.io/badge/%F0%9F%93%A7_Email-vadim%40ravefox.dev-red?style=for-the-badge)](mailto:vadim@ravefox.dev)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ravefox)
-[![It's a Plan](https://img.shields.io/badge/It's_a_Plan-24292F?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI%2BPHJlY3QgeD0iMTMiIHk9IjE0LjMiIHdpZHRoPSI2IiBoZWlnaHQ9IjMuNCIgcng9IjEuNyIgZmlsbD0id2hpdGUiIG9wYWNpdHk9Ii40Ii8%2BPGNpcmNsZSBjeD0iOS41IiBjeT0iMTYiIHI9IjYiIGZpbGw9IndoaXRlIi8%2BPHJlY3QgeD0iMTciIHk9IjEwLjUiIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgcng9IjMuNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8%2BPC9zdmc%2B)](https://github.com/croffasia/itsaplan)
+[![Portfolio](assets/badges/portfolio.svg)](https://ravefox.dev/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=portfolio)
+[![AppNative](assets/badges/appnative.svg)](https://appnative.pro/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=header)  
+[![Email](assets/badges/email.svg)](mailto:vadim@ravefox.dev)
+[![Telegram](assets/badges/telegram.svg)](https://t.me/ravefox)
+[![It's a Plan](assets/badges/itsaplan.svg)](https://github.com/croffasia/itsaplan)
 
 </div>
 
