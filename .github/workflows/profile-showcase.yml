@@ -19,20 +19,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/render-contributions.py
-      - name: Render night contribution calendar
-        uses: yoshi389111/github-profile-3d-contrib@e235d118909be71eb7edb05482a3de4e76156df3
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: .github/profile-night.json
-          MAX_REPOS: '100'
+      - name: Render contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake.svg?palette=github-light&color_snake=%237C3AED
+            assets/github-snake-dark.svg?palette=github-dark&color_snake=%23FACC15
       - name: Publish refreshed visuals
         run: |
-          cp profile-3d-contrib/github-activity-night.svg assets/github-activity-night.svg
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/open-source-dark.svg assets/open-source-light.svg assets/github-activity-night.svg
+          git add assets/open-source-dark.svg assets/open-source-light.svg assets/github-snake.svg assets/github-snake-dark.svg
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'docs: refresh public contributions and activity calendar'
+          git commit -m 'docs: refresh public contributions and snake animation'
           git pull --rebase origin main
           git push origin HEAD:main
