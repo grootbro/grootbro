@@ -133,6 +133,21 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 
 </details>
 
+## 🌱 Open Source
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg">
+  <img alt="Accepted contributions to public open-source projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg" width="840">
+</picture>
+
+[Explore my merged pull requests →](https://github.com/search?q=author%3Agrootbro+is%3Apr+is%3Amerged+is%3Apublic+-user%3Agrootbro&type=pullrequests)
+
+## 🌌 GitHub Activity
+
+![A year of GitHub contributions in a night skyline](https://raw.githubusercontent.com/grootbro/grootbro/main/assets/github-activity-night.svg)
+
+
 ---
 
 <div align="center">
