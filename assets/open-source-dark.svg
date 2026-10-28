@@ -4,7 +4,7 @@
 <rect x=".5" y=".5" width="839" height="459" rx="12" fill="#0d1117" stroke="#30363d"/>
 <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="#e6edf3">
 <text x="26" y="39" font-size="21" font-weight="600">Contributing upstream</text>
-<text x="26" y="66" font-size="14" fill="#8b949e">39 merged pull requests across these 4 projects</text>
+<text x="26" y="66" font-size="14" fill="#8b949e">43 merged pull requests across these 4 projects</text>
 <g transform="translate(28 96)" fill="none" stroke="#bc8cff" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
 <text x="60" y="110" font-size="16" font-weight="600" fill="#58a6ff">croffasia/itsaplan</text>
@@ -33,8 +33,8 @@
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
 <text x="60" y="356" font-size="16" font-weight="600" fill="#58a6ff">twentyhq/twenty</text>
 <rect x="716" y="338" width="98" height="24" rx="12" fill="#161b22"/>
-<text x="765" y="354" text-anchor="middle" font-size="12" fill="#8b949e">1 merged</text>
-<text x="60" y="380" font-size="14">fix(front): accept null Actor context.provider (#25532)</text>
-<text x="60" y="401" font-size="12" fill="#8b949e">#25537 · merged 08 Sep 2026</text>
-<text x="26" y="439" font-size="12" fill="#8b949e">Public merged PRs · refreshed 27 Oct 2026</text>
+<text x="765" y="354" text-anchor="middle" font-size="12" fill="#8b949e">5 merged</text>
+<text x="60" y="380" font-size="14">fix(server): refresh stale workflow version maps before sync</text>
+<text x="60" y="401" font-size="12" fill="#8b949e">#28743 · merged 27 Oct 2026</text>
+<text x="26" y="439" font-size="12" fill="#8b949e">Public merged PRs · refreshed 28 Oct 2026</text>
 </g></svg>
