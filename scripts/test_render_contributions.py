@@ -85,8 +85,8 @@ class RendererTests(unittest.TestCase):
         for svg in more:
             self.assertIn('>owner/project1</text>', svg)
             self.assertNotIn('>owner/project6</text>', svg)
-        self.assertIn('Show 1 more project', readme)
-        self.assertRegex(readme, r'open-source-light\.svg\?v=[a-f0-9]{12}')
+        self.assertNotIn('more project', readme)
+        self.assertEqual(readme.count('<details>'), 1)
         self.assertIn('Browse all 7 merged pull requests', readme)
         self.assertEqual(readme.count('https://github.com/owner/project'), 13)
 

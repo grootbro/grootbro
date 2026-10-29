@@ -144,17 +144,6 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <!-- merged-prs:start -->
 
 <details>
-<summary><b>Show 7 more projects</b></summary>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg?v=bd7c2324dc5a">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg?v=edf44cead286">
-  <img alt="More contribution projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg?v=edf44cead286" width="840">
-</picture>
-
-</details>
-
-<details>
 <summary><b>Browse all 58 merged pull requests</b></summary>
 
 **[gobeyondpty/chatwoot-mobile-app](https://github.com/gobeyondpty/chatwoot-mobile-app)** · 1 merged
