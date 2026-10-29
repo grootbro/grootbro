@@ -138,17 +138,17 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <!-- merged-prs:start -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-dark.svg?v=7ad9040d02da">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=3008ebbe8cc1">
-  <img alt="58 merged pull requests across 12 projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=3008ebbe8cc1" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-dark.svg?v=a6ad9cfd61bd">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=67f5f9ba00fc">
+  <img alt="58 merged pull requests across 12 projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=67f5f9ba00fc" width="840">
 </picture>
 
 <p>
 <a href="https://github.com/gobeyondpty/chatwoot-mobile-app/pull/1">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-dark.svg?v=e28364a6bb5c">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-light.svg?v=d5d01ee6b98b">
-  <img alt="gobeyondpty/chatwoot-mobile-app · 1 merged · fix: update dark mode for current develop and address icon contrast (#1)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-light.svg?v=d5d01ee6b98b" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-dark.svg?v=8bdcf20eb18c">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-light.svg?v=48aed60e8588">
+  <img alt="gobeyondpty/chatwoot-mobile-app · 1 merged · fix: update dark mode for current develop and address icon contrast (#1)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-light.svg?v=48aed60e8588" width="840">
 </picture>
 </a>
 </p>
@@ -156,9 +156,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <p>
 <a href="https://github.com/twentyhq/twenty/pull/28743">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-dark.svg?v=8b291f3b1c18">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-light.svg?v=9d904492abe0">
-  <img alt="twentyhq/twenty · 5 merged · fix(server): refresh stale workflow version maps before sync (#28743)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-light.svg?v=9d904492abe0" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-dark.svg?v=cab8feee8edc">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-light.svg?v=43c929a78bf4">
+  <img alt="twentyhq/twenty · 5 merged · fix(server): refresh stale workflow version maps before sync (#28743)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-light.svg?v=43c929a78bf4" width="840">
 </picture>
 </a>
 </p>
@@ -166,9 +166,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <p>
 <a href="https://github.com/Openpanel-dev/openpanel/pull/598">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-dark.svg?v=e5aed1b06c00">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-light.svg?v=b13e8d93c134">
-  <img alt="Openpanel-dev/openpanel · 4 merged · fix(self-hosting): generate insights and weekly digests (#598)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-light.svg?v=b13e8d93c134" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-dark.svg?v=514982db3f30">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-light.svg?v=249b12b4192f">
+  <img alt="Openpanel-dev/openpanel · 4 merged · fix(self-hosting): generate insights and weekly digests (#598)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-light.svg?v=249b12b4192f" width="840">
 </picture>
 </a>
 </p>
@@ -176,9 +176,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <p>
 <a href="https://github.com/WhiteTowerAI/ohmygame/pull/399">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-dark.svg?v=8a2a30202b41">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-light.svg?v=380d02269aa3">
-  <img alt="WhiteTowerAI/ohmygame · 3 merged · feat(preview): add a mobile landscape preset (#399)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-light.svg?v=380d02269aa3" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-dark.svg?v=5e91e084228b">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-light.svg?v=8bc6b25a6c3e">
+  <img alt="WhiteTowerAI/ohmygame · 3 merged · feat(preview): add a mobile landscape preset (#399)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-light.svg?v=8bc6b25a6c3e" width="840">
 </picture>
 </a>
 </p>
@@ -186,9 +186,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <p>
 <a href="https://github.com/getarcaneapp/arcane/pull/4550">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-dark.svg?v=317a1655c397">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-light.svg?v=091b8203d2bc">
-  <img alt="getarcaneapp/arcane · 1 merged · fix: require saved job enablement before manual runs (#4550)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-light.svg?v=091b8203d2bc" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-dark.svg?v=83fc3f13d10c">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-light.svg?v=459327324c16">
+  <img alt="getarcaneapp/arcane · 1 merged · fix: require saved job enablement before manual runs (#4550)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-light.svg?v=459327324c16" width="840">
 </picture>
 </a>
 </p>
