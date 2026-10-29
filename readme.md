@@ -135,13 +135,64 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 
 ## 🌱 Open Source
 
+<!-- merged-prs:start -->
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-dark.svg?v=a619d4b63bd4">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg?v=a0d18d6f1489">
-  <img alt="Five most recently contributed projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg?v=a0d18d6f1489" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-dark.svg?v=7ad9040d02da">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=3008ebbe8cc1">
+  <img alt="58 merged pull requests across 12 projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=3008ebbe8cc1" width="840">
 </picture>
 
-<!-- merged-prs:start -->
+<p>
+<a href="https://github.com/gobeyondpty/chatwoot-mobile-app/pull/1">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-dark.svg?v=e28364a6bb5c">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-light.svg?v=d5d01ee6b98b">
+  <img alt="gobeyondpty/chatwoot-mobile-app · 1 merged · fix: update dark mode for current develop and address icon contrast (#1)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-1-light.svg?v=d5d01ee6b98b" width="840">
+</picture>
+</a>
+</p>
+
+<p>
+<a href="https://github.com/twentyhq/twenty/pull/28743">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-dark.svg?v=8b291f3b1c18">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-light.svg?v=9d904492abe0">
+  <img alt="twentyhq/twenty · 5 merged · fix(server): refresh stale workflow version maps before sync (#28743)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-2-light.svg?v=9d904492abe0" width="840">
+</picture>
+</a>
+</p>
+
+<p>
+<a href="https://github.com/Openpanel-dev/openpanel/pull/598">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-dark.svg?v=e5aed1b06c00">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-light.svg?v=b13e8d93c134">
+  <img alt="Openpanel-dev/openpanel · 4 merged · fix(self-hosting): generate insights and weekly digests (#598)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-3-light.svg?v=b13e8d93c134" width="840">
+</picture>
+</a>
+</p>
+
+<p>
+<a href="https://github.com/WhiteTowerAI/ohmygame/pull/399">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-dark.svg?v=8a2a30202b41">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-light.svg?v=380d02269aa3">
+  <img alt="WhiteTowerAI/ohmygame · 3 merged · feat(preview): add a mobile landscape preset (#399)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-4-light.svg?v=380d02269aa3" width="840">
+</picture>
+</a>
+</p>
+
+<p>
+<a href="https://github.com/getarcaneapp/arcane/pull/4550">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-dark.svg?v=317a1655c397">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-light.svg?v=091b8203d2bc">
+  <img alt="getarcaneapp/arcane · 1 merged · fix: require saved job enablement before manual runs (#4550)" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-row-5-light.svg?v=091b8203d2bc" width="840">
+</picture>
+</a>
+</p>
+
 <!-- merged-prs:end -->
 
 [Explore my merged pull requests →](https://github.com/search?q=author%3Agrootbro+is%3Apr+is%3Amerged+is%3Apublic+-user%3Agrootbro&type=pullrequests)
