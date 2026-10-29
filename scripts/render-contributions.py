@@ -89,6 +89,11 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
             f'<text x="26" y="39" font-size="21" font-weight="600">{heading}</text>',
             f'<text x="26" y="66" font-size="14" fill="{muted}">{escape(summary)}</text>',
         ]
+        if variant == "recent":
+            header = svg.copy()
+            header[0] = header[0].replace(f'height="{height}"', 'height="90"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 90"')
+            header[3] = header[3].replace(f'height="{height-1}"', 'height="89"')
+            (root / f"open-source-summary-{theme}.svg").write_text("\n".join(header + ['</g></svg>']) + "\n", encoding="utf-8")
         for index, (repo, prs) in enumerate(rows):
             latest = prs[0]
             badge = f"{len(prs)} merged"
@@ -98,6 +103,7 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
             ).strftime("%d %b %Y")
             if index:
                 svg.append(f'<path d="M26 {y-23}H814" stroke="{border}"/>')
+            row_start = len(svg)
             svg.extend([
                 f'<g transform="translate(28 {y-12})" fill="none" stroke="{purple}" stroke-width="2">',
                 '<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>',
@@ -107,6 +113,16 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
                 f'<text x="60" y="{y+26}" font-size="14">{escape(clipped(latest["title"]))}</text>',
                 f'<text x="60" y="{y+47}" font-size="12" fill="{muted}">#{latest["number"]} · merged {merged}</text>',
             ])
+            if variant == "recent":
+                card = [
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="840" height="98" viewBox="0 0 840 98" role="img">',
+                    f'<title>{escape(repo)} · #{latest["number"]}</title>',
+                    f'<rect x=".5" y=".5" width="839" height="97" rx="12" fill="{bg}" stroke="{border}"/>',
+                    f'<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="{fg}">',
+                    f'<g transform="translate(0 {26-y})">',
+                    *svg[row_start:], '</g></g></svg>',
+                ]
+                (root / f"open-source-row-{index+1}-{theme}.svg").write_text("\n".join(card) + "\n", encoding="utf-8")
         svg.extend([
             f'<text x="26" y="{height-21}" font-size="12" fill="{muted}">{"Latest 5 projects · newest merge first" if variant == "recent" else "More projects · newest merge first"} · updated {updated}</text>',
             '</g></svg>',
@@ -114,17 +130,34 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
         (root / f"open-source-{'recent-' if variant == 'recent' else ''}{theme}.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
 print(f"Rendered {total} merged public PRs, featuring {len(featured)} projects.")
 
-# Keep the retired history section empty during scheduled refreshes.
+# Each linked image is one project, so GitHub can open its latest PR.
 readme = Path("readme.md")
 start = "<!-- merged-prs:start -->"
 end = "<!-- merged-prs:end -->"
 source = readme.read_text(encoding="utf-8")
 if source.count(start) != 1 or source.count(end) != 1:
     raise RuntimeError("Expected one merged-PR section in readme.md.")
-source = source.split(start)[0] + start + "\n" + end + source.split(end)[1]
+def picture(name, alt):
+    base = f"https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-{name}"
+    return [
+        '<picture>',
+        f'  <source media="(prefers-color-scheme: dark)" srcset="{base}-dark.svg">',
+        f'  <source media="(prefers-color-scheme: light)" srcset="{base}-light.svg">',
+        f'  <img alt="{escape(alt)}" src="{base}-light.svg" width="840">',
+        '</picture>',
+    ]
+
+lines = [start, "", *picture("summary", f"{total} merged pull requests across {len(featured)} projects"), ""]
+for index, (repo, prs) in enumerate(featured[:5]):
+    latest = prs[0]
+    lines.extend(['<p>', f'<a href="{escape(latest["html_url"])}">',
+        *picture(f"row-{index+1}", f'{repo} · {len(prs)} merged · {latest["title"]} (#{latest["number"]})'),
+        '</a>', '</p>', ""])
+lines.append(end)
+source = source.split(start)[0] + "\n".join(lines) + source.split(end)[1]
 # Raw image URLs can stay cached after a commit; change the URL with the pixels.
 source = re.sub(
-    r"assets/(open-source-(?:recent-)?(?:light|dark)\.svg)(?:\?v=[a-f0-9]+)?",
+    r"assets/(open-source-[a-z0-9-]+\.svg)(?:\?v=[a-f0-9]+)?",
     lambda match: f"assets/{match[1]}?v={hashlib.sha256((root / match[1]).read_bytes()).hexdigest()[:12]}",
     source,
 )
