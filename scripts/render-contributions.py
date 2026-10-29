@@ -92,7 +92,7 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
         if variant == "recent":
             header = svg.copy()
             header[0] = header[0].replace(f'height="{height}"', 'height="90"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 90"')
-            header[3] = header[3].replace(f'height="{height-1}"', 'height="89"')
+            header[3] = f'<rect width="840" height="90" fill="{bg}"/>'
             (root / f"open-source-summary-{theme}.svg").write_text("\n".join(header + ['</g></svg>']) + "\n", encoding="utf-8")
         for index, (repo, prs) in enumerate(rows):
             latest = prs[0]
@@ -117,10 +117,12 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
                 card = [
                     '<svg xmlns="http://www.w3.org/2000/svg" width="840" height="98" viewBox="0 0 840 98" role="img">',
                     f'<title>{escape(repo)} · #{latest["number"]}</title>',
-                    f'<rect x=".5" y=".5" width="839" height="97" rx="12" fill="{bg}" stroke="{border}"/>',
+                    f'<rect width="840" height="98" fill="{bg}"/>',
                     f'<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="{fg}">',
                     f'<g transform="translate(0 {26-y})">',
-                    *svg[row_start:], '</g></g></svg>',
+                    *svg[row_start:], '</g></g>',
+                    f'<path d="M26 97.5H814" stroke="{border}"/>' if index < len(rows) - 1 else '',
+                    '</svg>',
                 ]
                 (root / f"open-source-row-{index+1}-{theme}.svg").write_text("\n".join(card) + "\n", encoding="utf-8")
         svg.extend([
