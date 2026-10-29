@@ -32,10 +32,15 @@ while True:
     if payload.get("incomplete_results"):
         raise RuntimeError("GitHub returned incomplete search results; keep the last good card.")
     total = payload["total_count"]
+    if total > 1000:
+        raise RuntimeError("Search exceeds GitHub’s 1000-result limit; split the query before publishing.")
     items.extend(payload["items"])
-    if len(items) >= min(total, 1000) or not payload["items"]:
+    if len(items) >= total or not payload["items"]:
         break
     page += 1
+
+if len({item["id"] for item in items}) != total:
+    raise RuntimeError("Search returned missing or duplicate PRs; keep the last good card.")
 
 groups = collections.defaultdict(list)
 for item in items:
@@ -45,9 +50,11 @@ for item in items:
     groups[repo].append(item)
 for prs in groups.values():
     prs.sort(key=lambda pr: pr["pull_request"]["merged_at"], reverse=True)
-# Highlight upstream projects; personal/team repositories are not featured.
-preferred = ("croffasia/itsaplan", "vercel/chat", "saltmd/salt.md", "twentyhq/twenty")
-featured = [(repo, groups[repo]) for repo in preferred if groups.get(repo)]
+featured = sorted(
+    groups.items(),
+    key=lambda group: (group[1][0]["pull_request"]["merged_at"], group[0]),
+    reverse=True,
+)
 if not featured:
     raise RuntimeError("No merged public contributions returned; keep the last good card.")
 
@@ -67,14 +74,14 @@ for theme, colors in {
     "light": ("#ffffff", "#d0d7de", "#1f2328", "#59636e", "#0969da", "#8250df", "#f6f8fa"),
 }.items():
     bg, border, fg, muted, blue, purple, pill = colors
-    summary = f"{sum(len(prs) for _, prs in featured)} merged pull requests across these {len(featured)} projects"
+    summary = f"{sum(len(prs) for _, prs in featured)} merged pull requests across {len(featured)} projects"
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="840" height="{height}" viewBox="0 0 840 {height}" role="img" aria-labelledby="title desc">',
         '<title id="title">Open-source contributions by ' + escape(owner) + '</title>',
-        '<desc id="desc">Accepted pull requests in public projects. Latest merged contribution and total merged pull requests for each featured project.</desc>',
+        '<desc id="desc">Accepted pull requests in public projects. Latest merged contribution and total merged pull requests for every project, newest merge first.</desc>',
         f'<rect x=".5" y=".5" width="839" height="{height-1}" rx="12" fill="{bg}" stroke="{border}"/>',
         f'<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="{fg}">',
-        '<text x="26" y="39" font-size="21" font-weight="600">Contributing upstream</text>',
+        '<text x="26" y="39" font-size="21" font-weight="600">Open-source contributions</text>',
         f'<text x="26" y="66" font-size="14" fill="{muted}">{escape(summary)}</text>',
     ]
     for index, (repo, prs) in enumerate(featured):
@@ -95,8 +102,27 @@ for theme, colors in {
             f'<text x="60" y="{y+47}" font-size="12" fill="{muted}">#{latest["number"]} · merged {merged}</text>',
         ])
     svg.extend([
-        f'<text x="26" y="{height-21}" font-size="12" fill="{muted}">Public merged PRs · refreshed {updated}</text>',
+        f'<text x="26" y="{height-21}" font-size="12" fill="{muted}">Public PRs to other owners · latest merge per project · updated {updated}</text>',
         '</g></svg>',
     ])
     (root / f"open-source-{theme}.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
 print(f"Rendered {total} merged public PRs, featuring {len(featured)} projects.")
+
+# Native Markdown keeps every PR clickable when GitHub embeds the SVG as an image.
+readme = Path("readme.md")
+start = "<!-- merged-prs:start -->"
+end = "<!-- merged-prs:end -->"
+source = readme.read_text(encoding="utf-8")
+if source.count(start) != 1 or source.count(end) != 1:
+    raise RuntimeError("Expected one merged-PR section in readme.md.")
+lines = [start, "", "<details>", f"<summary>All {total} merged pull requests · {len(featured)} projects</summary>", ""]
+for repo, prs in featured:
+    lines.extend([f"**[{repo}](https://github.com/{repo})** · {len(prs)} merged", ""])
+    for pr in prs:
+        title = html.escape(pr["title"])
+        title = "".join("\\" + char if char in "\\`*{}_[]<>|" else char for char in title)
+        date = pr["pull_request"]["merged_at"][:10]
+        lines.append(f'- [{title} (#{pr["number"]})]({pr["html_url"]}) · {date}')
+    lines.append("")
+lines.extend(["</details>", "", end])
+readme.write_text(source.split(start)[0] + "\n".join(lines) + source.split(end)[1], encoding="utf-8")

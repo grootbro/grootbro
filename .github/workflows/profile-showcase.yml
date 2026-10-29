@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Check out profile
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Check contribution renderer
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - name: Render public open-source contributions
         env:
           GH_TOKEN: ${{ github.token }}
@@ -30,7 +32,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/open-source-dark.svg assets/open-source-light.svg assets/github-snake.svg assets/github-snake-dark.svg
+          git add readme.md assets/open-source-dark.svg assets/open-source-light.svg assets/github-snake.svg assets/github-snake-dark.svg
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'docs: refresh public contributions and snake animation'
           git pull --rebase origin main
