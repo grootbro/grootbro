@@ -122,13 +122,6 @@ source = readme.read_text(encoding="utf-8")
 if source.count(start) != 1 or source.count(end) != 1:
     raise RuntimeError("Expected one merged-PR section in readme.md.")
 lines = [start, ""]
-if len(featured) > 5:
-    lines.extend(["<details>", f"<summary><b>Show {len(featured) - 5} more {'project' if len(featured) == 6 else 'projects'}</b></summary>", "",
-        '<picture>',
-        f'  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-dark.svg">',
-        f'  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-light.svg">',
-        f'  <img alt="More contribution projects" src="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-light.svg" width="840">',
-        '</picture>', "", "</details>", ""])
 lines.extend(["<details>", f"<summary><b>Browse all {total} merged pull requests</b></summary>", ""])
 for repo, prs in featured:
     lines.extend([f"**[{repo}](https://github.com/{repo})** · {len(prs)} merged", ""])
