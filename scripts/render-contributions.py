@@ -2,8 +2,10 @@
 import collections
 import datetime as dt
 import html
+import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import urllib.parse
 import urllib.request
@@ -137,4 +139,11 @@ for repo, prs in featured:
         lines.append(f'- [{title} (#{pr["number"]})]({pr["html_url"]}) · {date}')
     lines.append("")
 lines.extend(["</details>", "", end])
-readme.write_text(source.split(start)[0] + "\n".join(lines) + source.split(end)[1], encoding="utf-8")
+source = source.split(start)[0] + "\n".join(lines) + source.split(end)[1]
+# Raw image URLs can stay cached after a commit; change the URL with the pixels.
+source = re.sub(
+    r"assets/(open-source-(?:recent-)?(?:light|dark)\.svg)(?:\?v=[a-f0-9]+)?",
+    lambda match: f"assets/{match[1]}?v={hashlib.sha256((root / match[1]).read_bytes()).hexdigest()[:12]}",
+    source,
+)
+readme.write_text(source, encoding="utf-8")

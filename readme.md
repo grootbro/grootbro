@@ -136,9 +136,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 ## 🌱 Open Source
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg">
-  <img alt="Five most recently contributed projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-dark.svg?v=a619d4b63bd4">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg?v=a0d18d6f1489">
+  <img alt="Five most recently contributed projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg?v=a0d18d6f1489" width="840">
 </picture>
 
 <!-- merged-prs:start -->
@@ -147,9 +147,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <summary><b>Show 7 more projects</b></summary>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg">
-  <img alt="More contribution projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg?v=bd7c2324dc5a">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg?v=edf44cead286">
+  <img alt="More contribution projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg?v=edf44cead286" width="840">
 </picture>
 
 </details>
