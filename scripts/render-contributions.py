@@ -91,8 +91,10 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
         ]
         if variant == "recent":
             header = svg.copy()
-            header[0] = header[0].replace(f'height="{height}"', 'height="90"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 90"')
-            header[3] = f'<rect width="840" height="90" fill="{bg}"/>'
+            header[0] = header[0].replace(f'height="{height}"', 'height="44"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 44"')
+            header[3] = f'<rect width="840" height="44" fill="{bg}"/>'
+            del header[5]
+            header[5] = header[5].replace('y="66"', 'y="28"')
             (root / f"open-source-summary-{theme}.svg").write_text("\n".join(header + ['</g></svg>']) + "\n", encoding="utf-8")
         for index, (repo, prs) in enumerate(rows):
             latest = prs[0]

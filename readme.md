@@ -138,9 +138,9 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <!-- merged-prs:start -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-dark.svg?v=ae694cbc365b">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=504dba9ea821">
-  <img alt="58 merged pull requests across 12 projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=504dba9ea821" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-dark.svg?v=a6ad9cfd61bd">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=67f5f9ba00fc">
+  <img alt="58 merged pull requests across 12 projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-summary-light.svg?v=67f5f9ba00fc" width="840">
 </picture>
 
 <p>
