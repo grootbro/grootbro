@@ -89,11 +89,11 @@ class RendererTests(unittest.TestCase):
         self.assertNotIn('Browse all', readme)
         self.assertEqual(readme.count('<a href='), 5)
         anchors = re.findall(r'<a href="[^"]+">(.*?)</a>', readme, re.S)
-        self.assertTrue(all('<picture>' not in anchor for anchor in anchors))
-        self.assertIn('<strong>owner/project6</strong>', anchors[0])
+        self.assertTrue(all('-title-' in anchor and '-body-' not in anchor and '-count-' not in anchor for anchor in anchors))
+        self.assertIn('alt="owner/project6"', anchors[0])
         self.assertIn('href="https://github.com/owner/project6/pull/7"', readme)
         self.assertNotIn('href="https://github.com/owner/project6/pull/6"', readme)
-        self.assertRegex(readme, r'open-source-row-1-light-[a-f0-9]{12}\.svg')
+        self.assertRegex(readme, r'open-source-row-1-title-light-[a-f0-9]{12}\.svg')
 
     def test_rejects_incomplete_search(self):
         error, svg, _ = self.render([{'incomplete_results': True}])
