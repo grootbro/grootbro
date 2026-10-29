@@ -47,7 +47,7 @@ class RendererTests(unittest.TestCase):
             finally:
                 os.chdir(previous)
 
-    def test_all_projects_pages_latest_merge_and_clickable_history(self):
+    def test_all_projects_pages_and_latest_merge(self):
         old = pr(1, 'new/project', '2020-01-01T00:00:00Z')
         newer = pr(2, 'new/project', '2026-10-28T00:00:00Z')
         latest = pr(3, 'another/project', '2026-10-29T00:00:00Z')
@@ -62,8 +62,6 @@ class RendererTests(unittest.TestCase):
             self.assertLess(svg.index('another/project'), svg.index('new/project'))
             self.assertIn('#2 · merged 28 Oct 2026', svg)
             self.assertNotIn('#1 · merged', svg)
-        self.assertIn('https://github.com/new/project/pull/1', readme)
-        self.assertIn('Fix &amp; improve \\[preview\\]', readme)
         self.assertTrue(readme.startswith('Before\n'))
         self.assertTrue(readme.endswith('\nAfter'))
 
@@ -86,9 +84,8 @@ class RendererTests(unittest.TestCase):
             self.assertIn('>owner/project1</text>', svg)
             self.assertNotIn('>owner/project6</text>', svg)
         self.assertNotIn('more project', readme)
-        self.assertEqual(readme.count('<details>'), 1)
-        self.assertIn('Browse all 7 merged pull requests', readme)
-        self.assertEqual(readme.count('https://github.com/owner/project'), 13)
+        self.assertNotIn('<details>', readme)
+        self.assertNotIn('Browse all', readme)
 
     def test_rejects_incomplete_search(self):
         error, svg, _ = self.render([{'incomplete_results': True}])
