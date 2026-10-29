@@ -89,7 +89,7 @@ class RendererTests(unittest.TestCase):
         self.assertEqual(readme.count('<a href='), 5)
         self.assertIn('href="https://github.com/owner/project6/pull/7"', readme)
         self.assertNotIn('href="https://github.com/owner/project6/pull/6"', readme)
-        self.assertRegex(readme, r'open-source-row-1-light\.svg\?v=[a-f0-9]{12}')
+        self.assertRegex(readme, r'open-source-row-1-light-[a-f0-9]{12}\.svg')
 
     def test_rejects_incomplete_search(self):
         error, svg, _ = self.render([{'incomplete_results': True}])
