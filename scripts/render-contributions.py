@@ -159,10 +159,18 @@ for index, (repo, prs) in enumerate(featured[:5]):
         '</a>', '</p>', ""])
 lines.append(end)
 source = source.split(start)[0] + "\n".join(lines) + source.split(end)[1]
-# Raw image URLs can stay cached after a commit; change the URL with the pixels.
+# GitHub's raw CDN can ignore query-string versions; use immutable filenames.
+def versioned_asset(match):
+    name = re.sub(r"-[a-f0-9]{12}(?=\.svg$)", "", match[1])
+    content = (root / name).read_bytes()
+    digest = hashlib.sha256(content).hexdigest()[:12]
+    versioned = f"{Path(name).stem}-{digest}.svg"
+    (root / versioned).write_bytes(content)
+    return f"assets/{versioned}"
+
 source = re.sub(
     r"assets/(open-source-[a-z0-9-]+\.svg)(?:\?v=[a-f0-9]+)?",
-    lambda match: f"assets/{match[1]}?v={hashlib.sha256((root / match[1]).read_bytes()).hexdigest()[:12]}",
+    versioned_asset,
     source,
 )
 readme.write_text(source, encoding="utf-8")
