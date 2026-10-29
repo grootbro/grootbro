@@ -94,7 +94,7 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
             header[0] = header[0].replace(f'height="{height}"', 'height="44"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 44"')
             header[3] = f'<rect width="840" height="44" fill="{bg}"/>'
             del header[5]
-            header[5] = header[5].replace('y="66"', 'y="28"')
+            header[5] = header[5].replace('y="66"', 'y="28"').replace('x="26"', 'x="0"')
             (root / f"open-source-summary-{theme}.svg").write_text("\n".join(header + ['</g></svg>']) + "\n", encoding="utf-8")
         for index, (repo, prs) in enumerate(rows):
             latest = prs[0]
@@ -117,13 +117,13 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
             ])
             if variant == "recent":
                 card = [
-                    '<svg xmlns="http://www.w3.org/2000/svg" width="840" height="98" viewBox="0 0 840 98" role="img">',
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="840" height="60" viewBox="60 38 840 60" role="img">',
                     f'<title>{escape(repo)} · #{latest["number"]}</title>',
-                    f'<rect width="840" height="98" fill="{bg}"/>',
+                    f'<rect width="900" height="98" fill="{bg}"/>',
                     f'<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="{fg}">',
                     f'<g transform="translate(0 {26-y})">',
                     *svg[row_start:], '</g></g>',
-                    f'<path d="M26 97.5H814" stroke="{border}"/>' if index < len(rows) - 1 else '',
+                    f'<path d="M60 97.5H900" stroke="{border}"/>' if index < len(rows) - 1 else '',
                     '</svg>',
                 ]
                 (root / f"open-source-row-{index+1}-{theme}.svg").write_text("\n".join(card) + "\n", encoding="utf-8")
@@ -134,7 +134,7 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
         (root / f"open-source-{'recent-' if variant == 'recent' else ''}{theme}.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
 print(f"Rendered {total} merged public PRs, featuring {len(featured)} projects.")
 
-# Each linked image is one project, so GitHub can open its latest PR.
+# Link only the project name so GitHub anchors the hovercard at the top.
 readme = Path("readme.md")
 start = "<!-- merged-prs:start -->"
 end = "<!-- merged-prs:end -->"
@@ -154,9 +154,10 @@ def picture(name, alt):
 lines = [start, "", *picture("summary", f"{total} merged pull requests across {len(featured)} projects"), ""]
 for index, (repo, prs) in enumerate(featured[:5]):
     latest = prs[0]
-    lines.extend(['<p>', f'<a href="{escape(latest["html_url"])}">',
-        *picture(f"row-{index+1}", f'{repo} · {len(prs)} merged · {latest["title"]} (#{latest["number"]})'),
-        '</a>', '</p>', ""])
+    lines.extend(['<p>',
+        f'<a href="{escape(latest["html_url"])}"><strong>{escape(repo)}</strong></a> · {len(prs)} merged<br>',
+        *picture(f"row-{index+1}", f'{latest["title"]} (#{latest["number"]})'),
+        '</p>', ""])
 lines.append(end)
 source = source.split(start)[0] + "\n".join(lines) + source.split(end)[1]
 # GitHub's raw CDN can ignore query-string versions; use immutable filenames.
