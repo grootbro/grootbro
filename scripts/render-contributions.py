@@ -114,25 +114,14 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
         (root / f"open-source-{'recent-' if variant == 'recent' else ''}{theme}.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
 print(f"Rendered {total} merged public PRs, featuring {len(featured)} projects.")
 
-# Native Markdown keeps every PR clickable when GitHub embeds the SVG as an image.
+# Keep the retired history section empty during scheduled refreshes.
 readme = Path("readme.md")
 start = "<!-- merged-prs:start -->"
 end = "<!-- merged-prs:end -->"
 source = readme.read_text(encoding="utf-8")
 if source.count(start) != 1 or source.count(end) != 1:
     raise RuntimeError("Expected one merged-PR section in readme.md.")
-lines = [start, ""]
-lines.extend(["<details>", f"<summary><b>Browse all {total} merged pull requests</b></summary>", ""])
-for repo, prs in featured:
-    lines.extend([f"**[{repo}](https://github.com/{repo})** · {len(prs)} merged", ""])
-    for pr in prs:
-        title = html.escape(pr["title"])
-        title = "".join("\\" + char if char in "\\`*{}_[]<>|" else char for char in title)
-        date = pr["pull_request"]["merged_at"][:10]
-        lines.append(f'- [{title} (#{pr["number"]})]({pr["html_url"]}) · {date}')
-    lines.append("")
-lines.extend(["</details>", "", end])
-source = source.split(start)[0] + "\n".join(lines) + source.split(end)[1]
+source = source.split(start)[0] + start + "\n" + end + source.split(end)[1]
 # Raw image URLs can stay cached after a commit; change the URL with the pixels.
 source = re.sub(
     r"assets/(open-source-(?:recent-)?(?:light|dark)\.svg)(?:\?v=[a-f0-9]+)?",
