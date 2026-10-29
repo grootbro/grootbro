@@ -91,11 +91,17 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
         ]
         if variant == "recent":
             header = svg.copy()
-            header[0] = header[0].replace(f'height="{height}"', 'height="44"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 44"')
-            header[3] = f'<rect width="840" height="44" fill="{bg}"/>'
-            del header[5]
-            header[5] = header[5].replace('y="66"', 'y="28"')
+            header[0] = header[0].replace(f'height="{height}"', 'height="84"').replace(f'viewBox="0 0 840 {height}"', 'viewBox="0 0 840 84"')
+            header[3] = f'<rect width="840" height="84" fill="{bg}"/><path d="M.5 84V12.5A12 12 0 0 1 12.5 .5H827.5A12 12 0 0 1 839.5 12.5V84" fill="none" stroke="{border}"/>'
             (root / f"open-source-summary-{theme}.svg").write_text("\n".join(header + ['</g></svg>']) + "\n", encoding="utf-8")
+            footer = [
+                '<svg xmlns="http://www.w3.org/2000/svg" width="840" height="38" viewBox="0 0 840 38">',
+                f'<rect width="840" height="38" fill="{bg}"/>',
+                f'<path d="M.5 0V25.5A12 12 0 0 0 12.5 37.5H827.5A12 12 0 0 0 839.5 25.5V0" fill="none" stroke="{border}"/>',
+                f'<text x="26" y="21" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="{muted}">Latest 5 projects · updated {updated}</text>',
+                '</svg>',
+            ]
+            (root / f"open-source-footer-{theme}.svg").write_text("\n".join(footer) + "\n", encoding="utf-8")
         for index, (repo, prs) in enumerate(rows):
             latest = prs[0]
             badge = f"{len(prs)} merged"
@@ -123,6 +129,7 @@ for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
                     f'<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="{fg}">',
                     f'<g transform="translate(0 {26-y})">',
                     *svg[row_start:], '</g></g>',
+                    f'<path d="M.5 0V98M839.5 0V98" stroke="{border}"/>',
                     f'<path d="M26 97.5H814" stroke="{border}"/>' if index < len(rows) - 1 else '',
                     '</svg>',
                 ]
@@ -158,11 +165,12 @@ def picture(name, alt, width="840"):
         '<picture>',
         f'<source media="(prefers-color-scheme: dark)" srcset="{base}-dark.svg">',
         f'<source media="(prefers-color-scheme: light)" srcset="{base}-light.svg">',
-        f'<img alt="{escape(alt)}" src="{base}-light.svg" width="{width}">',
+        f'<img alt="{escape(alt)}" src="{base}-light.svg" width="{width}" align="top">',
         '</picture>',
     ]
 
-lines = [start, "", *picture("summary", f"{total} merged pull requests across {len(featured)} projects"), ""]
+# Adjacent top-aligned slices form one frame while only titles are links.
+parts = ["".join(picture("summary", f"{total} merged pull requests across {len(featured)} projects", "100%"))]
 for index, (repo, prs) in enumerate(featured[:5]):
     latest = prs[0]
     title_width = min(650, len(repo) * 10 + 10)
@@ -170,8 +178,9 @@ for index, (repo, prs) in enumerate(featured[:5]):
     title = "".join(picture(f"row-{index+1}-title", repo, f"{title_width/840*100:.8f}%"))
     count = "".join(picture(f"row-{index+1}-count", f"{len(prs)} merged", f"{(780-title_width)/840*100:.8f}%"))
     body = "".join(picture(f"row-{index+1}-body", f'{latest["title"]} (#{latest["number"]})', "100%"))
-    lines.extend(['<p>' + icon + f'<a href="{escape(latest["html_url"])}">' + title + '</a>' + count + '<br>' + body + '</p>', ""])
-lines.append(end)
+    parts.append(icon + f'<a href="{escape(latest["html_url"])}">' + title + '</a>' + count + body)
+parts.append("".join(picture("footer", f"Updated {updated}", "100%")))
+lines = [start, "", "<p>" + "".join(parts) + "</p>", "", end]
 source = source.split(start)[0] + "\n".join(lines) + source.split(end)[1]
 # GitHub's raw CDN can ignore query-string versions; use immutable filenames.
 def versioned_asset(match):

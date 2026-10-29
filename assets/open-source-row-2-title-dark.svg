@@ -11,5 +11,6 @@
 <text x="60" y="216" font-size="14">fix(server): refresh stale workflow version maps before sync</text>
 <text x="60" y="237" font-size="12" fill="#8b949e">#28743 · merged 27 Oct 2026</text>
 </g></g>
+<path d="M.5 0V98M839.5 0V98" stroke="#30363d"/>
 <path d="M26 97.5H814" stroke="#30363d"/>
 </svg>

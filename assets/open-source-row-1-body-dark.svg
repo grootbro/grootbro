@@ -11,5 +11,6 @@
 <text x="60" y="134" font-size="14">fix: update dark mode for current develop and address icon contrast</text>
 <text x="60" y="155" font-size="12" fill="#8b949e">#1 · merged 28 Oct 2026</text>
 </g></g>
+<path d="M.5 0V98M839.5 0V98" stroke="#30363d"/>
 <path d="M26 97.5H814" stroke="#30363d"/>
 </svg>
