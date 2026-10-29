@@ -136,15 +136,26 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 ## 🌱 Open Source
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg">
-  <img alt="Accepted contributions to public open-source projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg" width="840">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg">
+  <img alt="Latest five merged pull requests" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg" width="840">
 </picture>
 
 <!-- merged-prs:start -->
 
 <details>
-<summary>All 58 merged pull requests · 12 projects</summary>
+<summary><b>Explore all 12 projects</b></summary>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg">
+  <img alt="All contribution projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg" width="840">
+</picture>
+
+</details>
+
+<details>
+<summary><b>Browse all 58 merged pull requests</b></summary>
 
 **[gobeyondpty/chatwoot-mobile-app](https://github.com/gobeyondpty/chatwoot-mobile-app)** · 1 merged
 

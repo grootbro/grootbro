@@ -20,7 +20,7 @@ def pr(number, repo, merged, title='Fix & improve [preview]'):
 
 
 class RendererTests(unittest.TestCase):
-    def render(self, pages):
+    def render(self, pages, recent=False):
         requests = []
 
         def fetch(request, timeout):
@@ -41,7 +41,8 @@ class RendererTests(unittest.TestCase):
                         runpy.run_path(str(SCRIPT))
                     except RuntimeError as error:
                         return error, Path('assets/open-source-light.svg').read_text(), requests
-                svgs = [Path(f'assets/open-source-{theme}.svg').read_text() for theme in ('light', 'dark')]
+                prefix = 'recent-' if recent else ''
+                svgs = [Path(f'assets/open-source-{prefix}{theme}.svg').read_text() for theme in ('light', 'dark')]
                 return svgs, Path('readme.md').read_text(), requests
             finally:
                 os.chdir(previous)
@@ -65,6 +66,19 @@ class RendererTests(unittest.TestCase):
         self.assertIn('Fix &amp; improve \\[preview\\]', readme)
         self.assertTrue(readme.startswith('Before\n'))
         self.assertTrue(readme.endswith('\nAfter'))
+
+    def test_recent_card_shows_five_prs_not_five_projects(self):
+        items = [pr(n, 'same/project', f'2026-10-{n:02d}T00:00:00Z') for n in range(1, 7)]
+        svgs, readme, _ = self.render([{'total_count': 6, 'items': items}], recent=True)
+        for svg in svgs:
+            ET.fromstring(svg)
+            self.assertEqual(svg.count('>same/project</text>'), 5)
+            self.assertIn('6 merged pull requests across 1 projects', svg)
+            self.assertNotIn('#1 · merged', svg)
+            self.assertLess(svg.index('#6 · merged'), svg.index('#5 · merged'))
+        self.assertIn('<details>\n<summary><b>Explore all 1 projects', readme)
+        self.assertIn('Browse all 6 merged pull requests', readme)
+        self.assertEqual(readme.count('https://github.com/same/project/pull/'), 6)
 
     def test_rejects_incomplete_search(self):
         error, svg, _ = self.render([{'incomplete_results': True}])

@@ -32,7 +32,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add readme.md assets/open-source-dark.svg assets/open-source-light.svg assets/github-snake.svg assets/github-snake-dark.svg
+          git add readme.md assets/open-source-recent-dark.svg assets/open-source-recent-light.svg assets/open-source-dark.svg assets/open-source-light.svg assets/github-snake.svg assets/github-snake-dark.svg
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'docs: refresh public contributions and snake animation'
           git pull --rebase origin main
