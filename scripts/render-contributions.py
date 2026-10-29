@@ -68,21 +68,15 @@ def escape(value):
 def clipped(value, limit=86):
     return value if len(value) <= limit else value[:limit - 1].rstrip() + "…"
 
-recent = sorted(
-    (pr for _, prs in featured for pr in prs),
-    key=lambda pr: (pr["pull_request"]["merged_at"], pr["id"]),
-    reverse=True,
-)[:5]
-recent_rows = [(pr["repository_url"].split("/repos/", 1)[1], [pr]) for pr in recent]
-for variant, rows in (("recent", recent_rows), ("projects", featured)):
+for variant, rows in (("recent", featured[:5]), ("projects", featured[5:])):
     height = 132 + len(rows) * 82
     for theme, colors in {
         "dark": ("#0d1117", "#30363d", "#e6edf3", "#8b949e", "#58a6ff", "#bc8cff", "#161b22"),
         "light": ("#ffffff", "#d0d7de", "#1f2328", "#59636e", "#0969da", "#8250df", "#f6f8fa"),
     }.items():
         bg, border, fg, muted, blue, purple, pill = colors
-        heading = "Latest contributions" if variant == "recent" else "Open-source contributions"
-        description = "Latest five merged pull requests." if variant == "recent" else "Latest merged contribution and total merged pull requests for every project."
+        heading = "Open-source contributions" if variant == "recent" else "More projects"
+        description = "Five most recently contributed projects, with total merged PRs and the latest contribution for each." if variant == "recent" else "Latest merged contribution and total merged pull requests for every project."
         summary = f"{sum(len(prs) for _, prs in featured)} merged pull requests across {len(featured)} projects"
         svg = [
             f'<svg xmlns="http://www.w3.org/2000/svg" width="840" height="{height}" viewBox="0 0 840 {height}" role="img" aria-labelledby="title desc">',
@@ -95,7 +89,7 @@ for variant, rows in (("recent", recent_rows), ("projects", featured)):
         ]
         for index, (repo, prs) in enumerate(rows):
             latest = prs[0]
-            badge = "merged" if variant == "recent" else f"{len(prs)} merged"
+            badge = f"{len(prs)} merged"
             y = 108 + index * 82
             merged = dt.datetime.fromisoformat(
                 latest["pull_request"]["merged_at"].replace("Z", "+00:00")
@@ -112,7 +106,7 @@ for variant, rows in (("recent", recent_rows), ("projects", featured)):
                 f'<text x="60" y="{y+47}" font-size="12" fill="{muted}">#{latest["number"]} · merged {merged}</text>',
             ])
         svg.extend([
-            f'<text x="26" y="{height-21}" font-size="12" fill="{muted}">{"Latest 5 merges" if variant == "recent" else "All projects · latest merge per project"} · updated {updated}</text>',
+            f'<text x="26" y="{height-21}" font-size="12" fill="{muted}">{"Latest 5 projects · newest merge first" if variant == "recent" else "More projects · newest merge first"} · updated {updated}</text>',
             '</g></svg>',
         ])
         (root / f"open-source-{'recent-' if variant == 'recent' else ''}{theme}.svg").write_text("\n".join(svg) + "\n", encoding="utf-8")
@@ -125,13 +119,15 @@ end = "<!-- merged-prs:end -->"
 source = readme.read_text(encoding="utf-8")
 if source.count(start) != 1 or source.count(end) != 1:
     raise RuntimeError("Expected one merged-PR section in readme.md.")
-lines = [start, "", "<details>", f"<summary><b>Explore all {len(featured)} projects</b></summary>", "",
-    '<picture>',
-    f'  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-dark.svg">',
-    f'  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-light.svg">',
-    f'  <img alt="All contribution projects" src="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-light.svg" width="840">',
-    '</picture>', "", "</details>", "", "<details>",
-    f"<summary><b>Browse all {total} merged pull requests</b></summary>", ""]
+lines = [start, ""]
+if len(featured) > 5:
+    lines.extend(["<details>", f"<summary><b>Show {len(featured) - 5} more {'project' if len(featured) == 6 else 'projects'}</b></summary>", "",
+        '<picture>',
+        f'  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-dark.svg">',
+        f'  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-light.svg">',
+        f'  <img alt="More contribution projects" src="https://raw.githubusercontent.com/{owner}/{owner}/main/assets/open-source-light.svg" width="840">',
+        '</picture>', "", "</details>", ""])
+lines.extend(["<details>", f"<summary><b>Browse all {total} merged pull requests</b></summary>", ""])
 for repo, prs in featured:
     lines.extend([f"**[{repo}](https://github.com/{repo})** · {len(prs)} merged", ""])
     for pr in prs:

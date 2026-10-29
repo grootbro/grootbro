@@ -138,18 +138,18 @@ That background shapes how I build today: clear behaviour, thoughtful edge cases
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg">
-  <img alt="Latest five merged pull requests" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg" width="840">
+  <img alt="Five most recently contributed projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-recent-light.svg" width="840">
 </picture>
 
 <!-- merged-prs:start -->
 
 <details>
-<summary><b>Explore all 12 projects</b></summary>
+<summary><b>Show 7 more projects</b></summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg">
-  <img alt="All contribution projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg" width="840">
+  <img alt="More contribution projects" src="https://raw.githubusercontent.com/grootbro/grootbro/main/assets/open-source-light.svg" width="840">
 </picture>
 
 </details>

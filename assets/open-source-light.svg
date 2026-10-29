@@ -1,104 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="1116" viewBox="0 0 840 1116" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="706" viewBox="0 0 840 706" role="img" aria-labelledby="title desc">
 <title id="title">Open-source contributions by grootbro</title>
 <desc id="desc">Latest merged contribution and total merged pull requests for every project.</desc>
-<rect x=".5" y=".5" width="839" height="1115" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<rect x=".5" y=".5" width="839" height="705" rx="12" fill="#ffffff" stroke="#d0d7de"/>
 <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="#1f2328">
-<text x="26" y="39" font-size="21" font-weight="600">Open-source contributions</text>
+<text x="26" y="39" font-size="21" font-weight="600">More projects</text>
 <text x="26" y="66" font-size="14" fill="#59636e">58 merged pull requests across 12 projects</text>
 <g transform="translate(28 96)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="110" font-size="16" font-weight="600" fill="#0969da">gobeyondpty/chatwoot-mobile-app</text>
+<text x="60" y="110" font-size="16" font-weight="600" fill="#0969da">re-utils/deuri</text>
 <rect x="716" y="92" width="98" height="24" rx="12" fill="#f6f8fa"/>
 <text x="765" y="108" text-anchor="middle" font-size="12" fill="#59636e">1 merged</text>
-<text x="60" y="134" font-size="14">fix: update dark mode for current develop and address icon contrast</text>
-<text x="60" y="155" font-size="12" fill="#59636e">#1 · merged 28 Oct 2026</text>
+<text x="60" y="134" font-size="14">fix: flush incomplete UTF-8 before malformed percent escapes</text>
+<text x="60" y="155" font-size="12" fill="#59636e">#3 · merged 24 Oct 2026</text>
 <path d="M26 167H814" stroke="#d0d7de"/>
 <g transform="translate(28 178)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="192" font-size="16" font-weight="600" fill="#0969da">twentyhq/twenty</text>
+<text x="60" y="192" font-size="16" font-weight="600" fill="#0969da">openclaw/openclaw</text>
 <rect x="716" y="174" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="190" text-anchor="middle" font-size="12" fill="#59636e">5 merged</text>
-<text x="60" y="216" font-size="14">fix(server): refresh stale workflow version maps before sync</text>
-<text x="60" y="237" font-size="12" fill="#59636e">#28743 · merged 27 Oct 2026</text>
+<text x="765" y="190" text-anchor="middle" font-size="12" fill="#59636e">2 merged</text>
+<text x="60" y="216" font-size="14">fix(qwen): honor thinking controls for custom DashScope providers</text>
+<text x="60" y="237" font-size="12" fill="#59636e">#181638 · merged 24 Oct 2026</text>
 <path d="M26 249H814" stroke="#d0d7de"/>
 <g transform="translate(28 260)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="274" font-size="16" font-weight="600" fill="#0969da">Openpanel-dev/openpanel</text>
+<text x="60" y="274" font-size="16" font-weight="600" fill="#0969da">croffasia/itsaplan</text>
 <rect x="716" y="256" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="272" text-anchor="middle" font-size="12" fill="#59636e">4 merged</text>
-<text x="60" y="298" font-size="14">fix(self-hosting): generate insights and weekly digests</text>
-<text x="60" y="319" font-size="12" fill="#59636e">#598 · merged 27 Oct 2026</text>
+<text x="765" y="272" text-anchor="middle" font-size="12" fill="#59636e">31 merged</text>
+<text x="60" y="298" font-size="14">fix(invites): surface received invitations on start and account pages</text>
+<text x="60" y="319" font-size="12" fill="#59636e">#667 · merged 23 Oct 2026</text>
 <path d="M26 331H814" stroke="#d0d7de"/>
 <g transform="translate(28 342)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="356" font-size="16" font-weight="600" fill="#0969da">WhiteTowerAI/ohmygame</text>
+<text x="60" y="356" font-size="16" font-weight="600" fill="#0969da">saltmd/salt.md</text>
 <rect x="716" y="338" width="98" height="24" rx="12" fill="#f6f8fa"/>
 <text x="765" y="354" text-anchor="middle" font-size="12" fill="#59636e">3 merged</text>
-<text x="60" y="380" font-size="14">feat(preview): add a mobile landscape preset</text>
-<text x="60" y="401" font-size="12" fill="#59636e">#399 · merged 26 Oct 2026</text>
+<text x="60" y="380" font-size="14">Render shared collections as native read-only tables</text>
+<text x="60" y="401" font-size="12" fill="#59636e">#40 · merged 23 Oct 2026</text>
 <path d="M26 413H814" stroke="#d0d7de"/>
 <g transform="translate(28 424)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="438" font-size="16" font-weight="600" fill="#0969da">getarcaneapp/arcane</text>
+<text x="60" y="438" font-size="16" font-weight="600" fill="#0969da">OLYMARKES/sekta-smm-content-room</text>
 <rect x="716" y="420" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="436" text-anchor="middle" font-size="12" fill="#59636e">1 merged</text>
-<text x="60" y="462" font-size="14">fix: require saved job enablement before manual runs</text>
-<text x="60" y="483" font-size="12" fill="#59636e">#4550 · merged 24 Oct 2026</text>
+<text x="765" y="436" text-anchor="middle" font-size="12" fill="#59636e">2 merged</text>
+<text x="60" y="462" font-size="14">Content Room: защита данных, резервная копия и версия v2026.09.04.1</text>
+<text x="60" y="483" font-size="12" fill="#59636e">#2 · merged 04 Sep 2026</text>
 <path d="M26 495H814" stroke="#d0d7de"/>
 <g transform="translate(28 506)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="520" font-size="16" font-weight="600" fill="#0969da">re-utils/deuri</text>
+<text x="60" y="520" font-size="16" font-weight="600" fill="#0969da">bkampdev/itsaplan</text>
 <rect x="716" y="502" width="98" height="24" rx="12" fill="#f6f8fa"/>
 <text x="765" y="518" text-anchor="middle" font-size="12" fill="#59636e">1 merged</text>
-<text x="60" y="544" font-size="14">fix: flush incomplete UTF-8 before malformed percent escapes</text>
-<text x="60" y="565" font-size="12" fill="#59636e">#3 · merged 24 Oct 2026</text>
+<text x="60" y="544" font-size="14">fix: sync MCP OAuth branch with current main</text>
+<text x="60" y="565" font-size="12" fill="#59636e">#1 · merged 01 Sep 2026</text>
 <path d="M26 577H814" stroke="#d0d7de"/>
 <g transform="translate(28 588)" fill="none" stroke="#8250df" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="602" font-size="16" font-weight="600" fill="#0969da">openclaw/openclaw</text>
+<text x="60" y="602" font-size="16" font-weight="600" fill="#0969da">vercel/chat</text>
 <rect x="716" y="584" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="600" text-anchor="middle" font-size="12" fill="#59636e">2 merged</text>
-<text x="60" y="626" font-size="14">fix(qwen): honor thinking controls for custom DashScope providers</text>
-<text x="60" y="647" font-size="12" fill="#59636e">#181638 · merged 24 Oct 2026</text>
-<path d="M26 659H814" stroke="#d0d7de"/>
-<g transform="translate(28 670)" fill="none" stroke="#8250df" stroke-width="2">
-<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="684" font-size="16" font-weight="600" fill="#0969da">croffasia/itsaplan</text>
-<rect x="716" y="666" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="682" text-anchor="middle" font-size="12" fill="#59636e">31 merged</text>
-<text x="60" y="708" font-size="14">fix(invites): surface received invitations on start and account pages</text>
-<text x="60" y="729" font-size="12" fill="#59636e">#667 · merged 23 Oct 2026</text>
-<path d="M26 741H814" stroke="#d0d7de"/>
-<g transform="translate(28 752)" fill="none" stroke="#8250df" stroke-width="2">
-<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="766" font-size="16" font-weight="600" fill="#0969da">saltmd/salt.md</text>
-<rect x="716" y="748" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="764" text-anchor="middle" font-size="12" fill="#59636e">3 merged</text>
-<text x="60" y="790" font-size="14">Render shared collections as native read-only tables</text>
-<text x="60" y="811" font-size="12" fill="#59636e">#40 · merged 23 Oct 2026</text>
-<path d="M26 823H814" stroke="#d0d7de"/>
-<g transform="translate(28 834)" fill="none" stroke="#8250df" stroke-width="2">
-<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="848" font-size="16" font-weight="600" fill="#0969da">OLYMARKES/sekta-smm-content-room</text>
-<rect x="716" y="830" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="846" text-anchor="middle" font-size="12" fill="#59636e">2 merged</text>
-<text x="60" y="872" font-size="14">Content Room: защита данных, резервная копия и версия v2026.09.04.1</text>
-<text x="60" y="893" font-size="12" fill="#59636e">#2 · merged 04 Sep 2026</text>
-<path d="M26 905H814" stroke="#d0d7de"/>
-<g transform="translate(28 916)" fill="none" stroke="#8250df" stroke-width="2">
-<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="930" font-size="16" font-weight="600" fill="#0969da">bkampdev/itsaplan</text>
-<rect x="716" y="912" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="928" text-anchor="middle" font-size="12" fill="#59636e">1 merged</text>
-<text x="60" y="954" font-size="14">fix: sync MCP OAuth branch with current main</text>
-<text x="60" y="975" font-size="12" fill="#59636e">#1 · merged 01 Sep 2026</text>
-<path d="M26 987H814" stroke="#d0d7de"/>
-<g transform="translate(28 998)" fill="none" stroke="#8250df" stroke-width="2">
-<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="1012" font-size="16" font-weight="600" fill="#0969da">vercel/chat</text>
-<rect x="716" y="994" width="98" height="24" rx="12" fill="#f6f8fa"/>
-<text x="765" y="1010" text-anchor="middle" font-size="12" fill="#59636e">4 merged</text>
-<text x="60" y="1036" font-size="14">feat(telegram): describe locations, contacts, polls and dice</text>
-<text x="60" y="1057" font-size="12" fill="#59636e">#836 · merged 28 Aug 2026</text>
-<text x="26" y="1095" font-size="12" fill="#59636e">All projects · latest merge per project · updated 30 Oct 2026</text>
+<text x="765" y="600" text-anchor="middle" font-size="12" fill="#59636e">4 merged</text>
+<text x="60" y="626" font-size="14">feat(telegram): describe locations, contacts, polls and dice</text>
+<text x="60" y="647" font-size="12" fill="#59636e">#836 · merged 28 Aug 2026</text>
+<text x="26" y="685" font-size="12" fill="#59636e">More projects · newest merge first · updated 30 Oct 2026</text>
 </g></svg>
