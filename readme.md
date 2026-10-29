@@ -18,7 +18,7 @@
 🌳 Founder of **[MindForest](https://mindforest.us/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=intro)** — the parent company and foundation for my products and development projects.  
 🌱 Building my own products through **[Ravefox](https://ravefox.dev/?utm_source=github&utm_medium=profile&utm_campaign=grootbro&utm_content=intro)** — web apps, mobile experiences, APIs and integrations.  
 🤖 Working with **AI agents, OpenClaw, Codex and MCP** to automate real workflows.  
-🧪 **20+ years in software**, with a strong background in **QA engineering and team leadership**.  
+🧪 **20+ years in software development**, with a strong background in **QA engineering and team leadership**.  
 📍 Based in **Thailand**. Good music, regular training, a disciplined yoga practice, and a habit of finding my way back to the ocean.
 
 ## 🛠️ Tech Stack
