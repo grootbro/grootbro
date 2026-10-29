@@ -2,6 +2,7 @@ import contextlib
 import io
 import json
 import os
+import re
 from pathlib import Path
 import runpy
 import tempfile
@@ -87,6 +88,9 @@ class RendererTests(unittest.TestCase):
         self.assertNotIn('<details>', readme)
         self.assertNotIn('Browse all', readme)
         self.assertEqual(readme.count('<a href='), 5)
+        anchors = re.findall(r'<a href="[^"]+">(.*?)</a>', readme, re.S)
+        self.assertTrue(all('<picture>' not in anchor for anchor in anchors))
+        self.assertIn('<strong>owner/project6</strong>', anchors[0])
         self.assertIn('href="https://github.com/owner/project6/pull/7"', readme)
         self.assertNotIn('href="https://github.com/owner/project6/pull/6"', readme)
         self.assertRegex(readme, r'open-source-row-1-light-[a-f0-9]{12}\.svg')

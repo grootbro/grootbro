@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="98" viewBox="0 0 840 98" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="60" viewBox="60 38 840 60" role="img">
 <title>gobeyondpty/chatwoot-mobile-app · #1</title>
-<rect width="840" height="98" fill="#0d1117"/>
+<rect width="900" height="98" fill="#0d1117"/>
 <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="#e6edf3">
 <g transform="translate(0 -82)">
 <g transform="translate(28 96)" fill="none" stroke="#bc8cff" stroke-width="2">
@@ -11,5 +11,5 @@
 <text x="60" y="134" font-size="14">fix: update dark mode for current develop and address icon contrast</text>
 <text x="60" y="155" font-size="12" fill="#8b949e">#1 · merged 28 Oct 2026</text>
 </g></g>
-<path d="M26 97.5H814" stroke="#30363d"/>
+<path d="M60 97.5H900" stroke="#30363d"/>
 </svg>
