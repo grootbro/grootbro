@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="38" viewBox="0 0 60 38" role="img">
+<title>twentyhq/twenty · #28743</title>
+<rect width="840" height="98" fill="#ffffff"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="#1f2328">
+<g transform="translate(0 -246)">
+<g transform="translate(28 260)" fill="none" stroke="#8250df" stroke-width="2">
+<circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
+<text x="60" y="274" font-size="16" font-weight="600" fill="#0969da">twentyhq/twenty</text>
+<rect x="716" y="256" width="98" height="24" rx="12" fill="#f6f8fa"/>
+<text x="765" y="272" text-anchor="middle" font-size="12" fill="#59636e">5 merged</text>
+<text x="60" y="298" font-size="14">fix(server): refresh stale workflow version maps before sync</text>
+<text x="60" y="319" font-size="12" fill="#59636e">#28743 · merged 27 Oct 2026</text>
+</g></g>
+<path d="M.5 0V98M839.5 0V98" stroke="#d0d7de"/>
+<path d="M26 97.5H814" stroke="#d0d7de"/>
+</svg>

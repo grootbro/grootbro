@@ -4,30 +4,30 @@
 <rect x=".5" y=".5" width="839" height="705" rx="12" fill="#0d1117" stroke="#30363d"/>
 <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" fill="#e6edf3">
 <text x="26" y="39" font-size="21" font-weight="600">More projects</text>
-<text x="26" y="66" font-size="14" fill="#8b949e">58 merged pull requests across 12 projects</text>
+<text x="26" y="66" font-size="14" fill="#8b949e">61 merged pull requests across 12 projects</text>
 <g transform="translate(28 96)" fill="none" stroke="#bc8cff" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="110" font-size="16" font-weight="600" fill="#58a6ff">re-utils/deuri</text>
+<text x="60" y="110" font-size="16" font-weight="600" fill="#58a6ff">getarcaneapp/arcane</text>
 <rect x="716" y="92" width="98" height="24" rx="12" fill="#161b22"/>
 <text x="765" y="108" text-anchor="middle" font-size="12" fill="#8b949e">1 merged</text>
-<text x="60" y="134" font-size="14">fix: flush incomplete UTF-8 before malformed percent escapes</text>
-<text x="60" y="155" font-size="12" fill="#8b949e">#3 · merged 24 Oct 2026</text>
+<text x="60" y="134" font-size="14">fix: require saved job enablement before manual runs</text>
+<text x="60" y="155" font-size="12" fill="#8b949e">#4550 · merged 24 Oct 2026</text>
 <path d="M26 167H814" stroke="#30363d"/>
 <g transform="translate(28 178)" fill="none" stroke="#bc8cff" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="192" font-size="16" font-weight="600" fill="#58a6ff">openclaw/openclaw</text>
+<text x="60" y="192" font-size="16" font-weight="600" fill="#58a6ff">re-utils/deuri</text>
 <rect x="716" y="174" width="98" height="24" rx="12" fill="#161b22"/>
-<text x="765" y="190" text-anchor="middle" font-size="12" fill="#8b949e">2 merged</text>
-<text x="60" y="216" font-size="14">fix(qwen): honor thinking controls for custom DashScope providers</text>
-<text x="60" y="237" font-size="12" fill="#8b949e">#181638 · merged 24 Oct 2026</text>
+<text x="765" y="190" text-anchor="middle" font-size="12" fill="#8b949e">1 merged</text>
+<text x="60" y="216" font-size="14">fix: flush incomplete UTF-8 before malformed percent escapes</text>
+<text x="60" y="237" font-size="12" fill="#8b949e">#3 · merged 24 Oct 2026</text>
 <path d="M26 249H814" stroke="#30363d"/>
 <g transform="translate(28 260)" fill="none" stroke="#bc8cff" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
-<text x="60" y="274" font-size="16" font-weight="600" fill="#58a6ff">croffasia/itsaplan</text>
+<text x="60" y="274" font-size="16" font-weight="600" fill="#58a6ff">openclaw/openclaw</text>
 <rect x="716" y="256" width="98" height="24" rx="12" fill="#161b22"/>
-<text x="765" y="272" text-anchor="middle" font-size="12" fill="#8b949e">31 merged</text>
-<text x="60" y="298" font-size="14">fix(invites): surface received invitations on start and account pages</text>
-<text x="60" y="319" font-size="12" fill="#8b949e">#667 · merged 23 Oct 2026</text>
+<text x="765" y="272" text-anchor="middle" font-size="12" fill="#8b949e">2 merged</text>
+<text x="60" y="298" font-size="14">fix(qwen): honor thinking controls for custom DashScope providers</text>
+<text x="60" y="319" font-size="12" fill="#8b949e">#181638 · merged 24 Oct 2026</text>
 <path d="M26 331H814" stroke="#30363d"/>
 <g transform="translate(28 342)" fill="none" stroke="#bc8cff" stroke-width="2">
 <circle cx="3" cy="3" r="2.5"/><circle cx="15" cy="3" r="2.5"/><circle cx="3" cy="17" r="2.5"/><path d="M3 5.5v9M12.5 3H10a7 7 0 0 0-7 7"/></g>
